@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCOUNTS</title>
+
+    <link rel="stylesheet" href="css/account.css">
+</head>
+
+<body>
+    <div class="MainDiv">
+        <div class="header">
+            <div class="header-container">
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="images/logo.png" height="80px" width="98px" alt="Logo">
+                    </div>
+                    <div class="linksandcart">
+                        <nav>
+                            <ul class="navlinks">
+                                <li> <a class="navlink" href="index.html">Home</a></li>
+                                <li> <a class="navlink" href="aboutus.html">About</a></li>
+                                <li> <a class="navlink" href="contact.html">Contact</a></li>
+                                <li> <a class="navlink" href="account.html">Accounts</a></li>
+                            </ul>
+                        </nav>
+                        <img src="images/cart-icon-16.png" width="30" height="30" alt="Cart">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-container">
+            <div class="body-innercontainer">
+
+                <div class="left">
+                    <img src="images/test.png">
+                </div>
+
+                <div class="right">
+                    <div class="tabs">
+                        <span id="loginTab" class="active">Login</span>
+                        <span id="registerTab" class="inactive">Register</span>
+                    </div>
+
+                    <form id="loginForm" class="form">
+                        <input class="form-link" type="text" placeholder="Username">
+                        <input class="form-link" type="password" placeholder="Password">
+
+                        <a href="#" class="forgot">Forgot Password?</a>
+
+                        <button type="submit">Login</button>
+                    </form>
+
+                    <form id="registerForm" class="form hidden">
+                        <input class="form-link" type="text" placeholder="Username">
+                        <input class="form-link" type="email" placeholder="Email">
+                        <input class="form-link" type="password" placeholder="Password">
+                        <button type="submit">Register</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and ios mobile phone.</p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png">
+                            <img src="images/app-store.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="images/Logo.png" width="98px" height="80px" alt="">
+                        <p>Our purpose is to sutainably make the pleasure and benefits of sports Accessible to the many.
+                        </p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-copyright"></div>
+                <hr>
+                <p class="copyright">Copyright 2025 - FastStore </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const loginTab = document.getElementById("loginTab");
+        const registerTab = document.getElementById("registerTab");
+        const loginForm = document.getElementById("loginForm");
+        const registerForm = document.getElementById("registerForm");
+
+        registerTab.onclick = () => {
+            registerTab.classList.add("active");
+            registerTab.classList.remove("inactive");
+            loginTab.classList.remove("active");
+            loginTab.classList.add("inactive");
+            loginForm.classList.add("hidden");
+            registerForm.classList.remove("hidden");
+        };
+
+        loginTab.onclick = () => {
+            loginTab.classList.add("active");
+            loginTab.classList.remove("inactive");
+            registerTab.classList.remove("active");
+            registerTab.classList.add("inactive");
+            registerForm.classList.add("hidden");
+            loginForm.classList.remove("hidden");
+        };
+    </script>
+
+</body>
+
+</html>
