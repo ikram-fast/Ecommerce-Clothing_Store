@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {    
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: black;
+    
+}
+.header-container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 20px;
+    max-width: 1300px;
+    margin: auto;
+    height: 100px;
+}
+
+.linksandcart {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navlinks {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navlink {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.navlink::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #ff3535;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: 0.3s ease-in-out;
+}
+
+.navlink:hover {
+    color: #ff3535;
+}
+
+.navlink:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white; 
+    color: #333;
+    padding: 45px;
+    border-radius: 22px;
+    border: 1px solid #f2bcbc;
+    box-shadow: 0 8px 25px rgba(230, 0, 0, 0.12);
+    width: 400px;
+    max-width: 90%;
+}
+
+.contact-card h2 {
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.MainForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.MainForm input::placeholder,
+.MainForm textarea::placeholder {
+    color: #530000;
+}
+
+.MainForm input,
+.MainForm textarea {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #e0a0a0;
+    padding: 12px;
+    border-radius: 10px;
+    color: #333;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.MainForm textarea {
+    min-height: 140px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.MainForm input:focus,
+.MainForm textarea:focus {
+    border: 1.5px solid #000000;
+}
+
+/* BUTTON */
+.MainForm button {
+    background: #ff0000;
+    padding: 12px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.MainForm button:hover {
+    background-color: #530000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-col-1 {
+    flex-basis: 30%;
+}
+
+.footer-col-2 {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-col-2 img {
+    width: 130px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.footer-col-3, .footer-col-4 {
+    flex-basis: 20%;
+    text-align: center;
+}
+
+.footer ul {
+    list-style-type: none;
+}
+
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 140px;
+}
+
+.footer hr {
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+ text-align: center;
+}
